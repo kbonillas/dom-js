@@ -23,23 +23,45 @@
 // 5. check if age is 21 or more, then display "You are free!"
 // 6. if neither of the above are true, then display "Try again next year!"
 
-var age = 17;
+
+
+
+// var age = 15;
 // var accompaniedByAdult = true;
-var accompaniedByAdult = false;
+// var accompaniedByAdult = false;
 
-if ((age >= 18) && (age < 21) && (accompaniedByAdult = 1)) {
-    console.log('Allowed!');
-} else {
-    console.log('Denied!');
-} 
+var age = prompt('Enter your age: ');
+    // accompaniedByAdult = confirm('Are you accompanied by someone over 21?');
 
-if ((age < 18) && (accompaniedByAdult = 0)) {
-    console.log('Try again next year!');
+console.log(typeof parseInt(age)); // makes any string a number
+
+if ((age >= 18) && (age < 21)) {
+    accompaniedByAdult = confirm('Are you accompanied by someone over 21?');
+    // if (accompaniedByAdult) {
+    //     console.log('Allowed!');
+    // } else {
+    //     console.log('Denied!');
+    // }
+
+    // ternary operation:
+    accompaniedByAdult ? console.log('Allowed') : console.log('Denied');
+} else if (age >= 21) {
+    console.log('You are free!');
+}
+else {
+    console.log('Try again next year :(');
 }
 
 
-// if (age > 21) {
-//     console.log('You are free!');
-// } else {
-//     console.log('Try again next year!');
-// }
+
+
+
+
+
+//ternary operation
+// (age >= 18 && age < 21) ? 
+//     (accompaniedByAdult ? 
+//         console.log('Allowed') : console.log('Denied')) : 
+//     (age >= 21) ? 
+//         console.log('You are free!') : 
+//         console.log('Try again next year :(');
